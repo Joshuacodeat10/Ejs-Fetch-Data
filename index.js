@@ -16,7 +16,7 @@ app.get('/about',(req,res) => {
     res.render('about',{title: 'About'})
 })
 app.get('/index',(req,res) => {
-    res.sendFile('./views/index.html', {root: __dirname});
+    res.sendFile('./views/index.html', {root: __dirname});ddddhhhhhhhh
 })
 
 app.use((req,res)=>{

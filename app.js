@@ -1,7 +1,8 @@
 const express= require('express');
-const axios= require('axios')
+const axios= require('axios');
 const app= express();
-app.listen(3100,()=>{
+const port=3100;
+app.listen(port,()=>{
     console.log('running the app')
 })
 app.set("view engine","ejs")
@@ -19,10 +20,9 @@ app.get('/',async(req,res) => {
 app.get('/about',(req,res) => {
     res.render('about',{title: 'About'})
 })
-app.get('/index',(req,res) => {
-    res.sendFile('./views/index.html', {root: __dirname});
-})
+
 
 app.use((req,res)=>{
     res.status(404).render('404', {title: '404'})
 })
+a
